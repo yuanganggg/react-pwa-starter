@@ -1,4 +1,4 @@
 /**
  * @description - nothing but export component
  */
-export { default } from './Counter';
+export { default } from './Gallery';
