@@ -7,12 +7,8 @@ import React from 'react';
 import { Redirect, Route, Switch, NavLink } from 'react-router-dom';
 import { Menu, Icon } from 'antd';
 // Internal
-import Lazy from '../HOC/Lazy/';
 import Counter from '../component/Counter/';
 import RepoSearch from '../component/RepoSearch/';
-import HelloWorld from '../component/HelloWorld/';
-// Scope
-const LazyReview = Lazy(() => import(/* webpackChunkName: "review" */ '../component/Review/'));
 
 // eslint-disable-next-line
 export default function App() {
@@ -40,8 +36,6 @@ export default function App() {
         <Switch>
           <Route path="/counter" component={Counter} />
           <Route path="/search" component={RepoSearch} />
-          <Route path="/review" component={LazyReview} />
-          <Route path="/hello" component={HelloWorld} />
           <Redirect to="/counter" />
         </Switch>
       </article>
