@@ -1,0 +1,39 @@
+# eslint configuration
+parser: babel-eslint
+parserOptions:
+  ecmaVersion: 6
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
+    experimentalObjectRestSpread: true
+    impliedStrict: true
+env:
+  browser: true
+  node: true
+  es6: true
+  jasmine: true
+  jest: true
+extends:
+  - 'eslint:recommended'
+  - 'airbnb-base'
+rules:
+  indent:
+    - error
+    - 2
+    - SwitchCase: 1
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+    - allowTemplateLiterals: true
+  semi:
+    - error
+    - always
+  comma-dangle:
+    - error
+    - objects: never
+  arrow-parens:
+    - error
+    - always

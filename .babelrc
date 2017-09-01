@@ -1,0 +1,57 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "loose": true
+      }
+    ],
+    "react",
+    "stage-3"
+  ],
+  "plugins": [
+    "transform-inline-environment-variables",
+    "transform-class-properties",
+    "syntax-dynamic-import",
+    "lodash"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel",
+        [
+          "import",
+          {
+            "libraryName": "antd",
+            "style": "css"
+          }
+        ]
+      ]
+    },
+    "production": {
+      "plugins": [
+        "transform-runtime",
+        [
+          "import",
+          {
+            "libraryName": "antd",
+            "style": "css"
+          }
+        ]
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        [
+          "import",
+          {
+            "libraryName": "antd",
+            "style": "css"
+          }
+        ]
+      ]
+    }
+  }
+}
