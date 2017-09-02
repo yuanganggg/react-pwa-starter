@@ -2,31 +2,40 @@
  * @description - coco project configuration
  * @author - huang.jian <hjj491229492@hotmail.com>
  */
+
+// Native
+const path = require('path');
+
 /* eslint-disable import/no-extraneous-dependencies */
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const InjectServiceWorkerPlugin = require('webpack-plugin-inject-service-worker');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 module.exports = {
   plugins: [
     Reflect.construct(InjectServiceWorkerPlugin, []),
-    Reflect.construct(SWPrecacheWebpackPlugin, [{
-      cacheId: 'react-starter-v1',
-      filename: 'service-worker.js',
-      dontCacheBustUrlsMatching: /\.\w{8}\./,
-      stripPrefix: 'dist/client',
-      // navigateFallback: '/index.html',
-      staticFileGlobs: ['dist/client/**/*.{js,html,css}'],
-      staticFileGlobsIgnorePatterns: [/\.map$/, /manifest\.json$/],
-      runtimeCaching: [
-        {
-          urlPattern: /^\/(counter|search)\/?/,
-          handler: 'networkFirst'
-        },
-        {
-          urlPattern: /\.(js|css|html)/,
-          handler: 'cacheFirst'
-        }
-      ]
-    }])
+    Reflect.construct(WebpackPwaManifest, [
+      {
+        short_name: 'Baby',
+        name: 'Blog promise for Carey baby',
+        display: 'standalone',
+        background_color: '#2196F3',
+        theme_color: '#2196F3',
+        start_url: 'index.html?launcher=true',
+        ios: true,
+        icons: [
+          {
+            src: path.resolve('public/android-icon.png'),
+            sizes: [144, 196, 256, 512],
+            destination: 'android'
+          },
+          {
+            src: path.resolve('public/ios-icon.png'),
+            sizes: [144, 196, 256, 512],
+            ios: true,
+            destination: 'ios'
+          }
+        ]
+      }
+    ])
   ]
 };
