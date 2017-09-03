@@ -34,7 +34,7 @@ module.exports = {
         display: 'standalone',
         background_color: '#2196F3',
         theme_color: '#2196F3',
-        start_url: 'index.html?launcher=true',
+        start_url: '/index.html',
         ios: true,
         icons: [
           {
