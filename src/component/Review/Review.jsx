@@ -15,14 +15,20 @@ export default class Review extends Component {
       exception: 80,
       success: 100
     };
+
+    this.styles = {
+      spacing: {
+        marginLeft: 10
+      }
+    };
   }
 
   render() {
     return (
       <Card title="审批进度">
         <Progress type="circle" percent={this.state.default} />
-        <Progress type="circle" percent={this.state.success} status="success" />
-        <Progress type="circle" percent={this.state.exception} />
+        <Progress type="circle" style={this.styles.spacing} percent={this.state.exception} />
+        <Progress type="circle" style={this.styles.spacing} percent={this.state.success} status="success" />
       </Card>
     );
   }
