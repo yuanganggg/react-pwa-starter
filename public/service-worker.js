@@ -19,12 +19,9 @@ const swWorkBox = new self.WorkboxSW({
 swWorkBox.precache([]);
 
 // Register special strategy
-// Request latest entry first
-swWorkBox.router.registerRoute('/index.html', swWorkBox.strategies.networkFirst({
-  networkTimeoutSeconds: 5
-}));
 
 // Avoid static file fallback into navigate mode
+// Notice registerNavigationRoute will not cooperate with prerender default
 swWorkBox.router.registerNavigationRoute('/index.html', {
   blacklist: [/\.(js|css|jpe?g|png)$/i]
 });
