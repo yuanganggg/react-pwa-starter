@@ -18,11 +18,30 @@ const swWorkBox = new self.WorkboxSW({
 // Pre-cache static files
 swWorkBox.precache([]);
 
-// Register special strategy
+// Register pre-render strategy
+const PreRenderPaths = ['/search', '/review', '/gallery'];
+const PreRenderRoute = {
+  match: ({ url, event }) => event.request.mode === 'navigate' && PreRenderPaths.includes(url.pathname),
+  handler: ({ event }) => {
+    // Pre-render directory index
+    const target = `${event.request.url}'/index.html'`;
 
-// Avoid static file fallback into navigate mode
-// Notice registerNavigationRoute will not cooperate with prerender default
+    return fetch(target).catch(() => caches.match(target));
+  }
+};
+
+swWorkBox.router.registerRoute(PreRenderRoute.match, PreRenderRoute.handler);
+
+// Avoid static file fall into navigate mode
 swWorkBox.router.registerNavigationRoute('/index.html', {
-  blacklist: [/\.(js|css|jpe?g|png)$/i]
+  blacklist: [
+    /\/(search|review|gallery)/,
+    /\/ios/,
+    /\/android/,
+    /\/asset/,
+    /\/script/,
+    /\/stylesheet/,
+    /\/manifest\..+\.json/
+  ]
 });
 
