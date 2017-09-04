@@ -11,10 +11,18 @@ const InjectServiceWorkerPlugin = require('webpack-plugin-inject-service-worker'
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const CopyPlugin = require('copy-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const PrerenderSpaPlugin = require('prerender-spa-plugin');
 
 module.exports = {
   plugins: [
-    Reflect.construct(InjectServiceWorkerPlugin, []),
+    Reflect.construct(InjectServiceWorkerPlugin, [{
+      swPath: '/service-worker.js',
+      swScope: '/'
+    }]),
+    Reflect.construct(PrerenderSpaPlugin, [
+      path.resolve(process.cwd(), 'dist', 'client'),
+      ['/search', '/review', '/gallery']
+    ]),
     Reflect.construct(CopyPlugin, [[{
       from: 'node_modules/workbox-sw/build/importScripts/workbox-sw.prod.*',
       to: '[name].[ext]'
