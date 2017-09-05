@@ -2,11 +2,11 @@
 # yarn lockfile v1
 
 
-"@coco/cli@^0.3.16":
-  version "0.3.16"
-  resolved "http://rn.juxinli.com/@coco/cli/download/@coco/cli-0.3.16.tgz#0e500bc5dfe3039ddb378fc87f9a3f4ccb489c9c"
+"@coco/cli@^0.3.18":
+  version "0.3.18"
+  resolved "http://rn.juxinli.com/@coco/cli/download/@coco/cli-0.3.18.tgz#ec5546a30577d97dedc4b44464b032d3f2cb2814"
   dependencies:
-    "@coco/webpack" "^0.3.10"
+    "@coco/webpack" "^0.3.12"
     babel-eslint "^7.2.3"
     chalk "^2.1.0"
     commander "^2.9.0"
@@ -25,9 +25,9 @@
     webpack "^3.5.2"
     webpack-dev-server "^2.7.1"
 
-"@coco/webpack@^0.3.10":
-  version "0.3.10"
-  resolved "http://rn.juxinli.com/@coco/webpack/download/@coco/webpack-0.3.10.tgz#adb5640e51c8edb03cf8850e9abfde4c9ac7ceba"
+"@coco/webpack@^0.3.12":
+  version "0.3.12"
+  resolved "http://rn.juxinli.com/@coco/webpack/download/@coco/webpack-0.3.12.tgz#9423eda6aa1ad97d40f29f1131ddd393f0cb82fe"
   dependencies:
     awesome-typescript-loader "^3.2.2"
     babel-core "^6.25.0"
@@ -52,6 +52,7 @@
     webpack "^3.5.1"
     webpack-bundle-analyzer "^2.9.0"
     webpack-node-externals "^1.6.0"
+    webpack-plugin-html-minify "^0.2.0"
     webpack-plugin-inject-external "^0.2.0"
     webpack-plugin-strawberry "^0.1.2"
 
@@ -4370,7 +4371,7 @@ html-loader@^0.5.1:
     loader-utils "^1.0.2"
     object-assign "^4.1.0"
 
-html-minifier@^3.0.1, html-minifier@^3.2.3:
+html-minifier@^3.0.1, html-minifier@^3.2.3, html-minifier@^3.5.3:
   version "3.5.3"
   resolved "http://rn.juxinli.com/html-minifier/download/html-minifier-3.5.3.tgz#4a275e3b1a16639abb79b4c11191ff0d0fcf1ab9"
   dependencies:
@@ -10020,6 +10021,13 @@ webpack-node-externals@^1.6.0:
   version "1.6.0"
   resolved "http://rn.juxinli.com/webpack-node-externals/download/webpack-node-externals-1.6.0.tgz#232c62ec6092b100635a3d29d83c1747128df9bd"
 
+webpack-plugin-html-minify@^0.2.0:
+  version "0.2.0"
+  resolved "http://rn.juxinli.com/webpack-plugin-html-minify/download/webpack-plugin-html-minify-0.2.0.tgz#6f7df82d6cb067f1f21f2f3ec5d7a7152ae28bca"
+  dependencies:
+    html-minifier "^3.5.3"
+    lodash "^4.17.4"
+
 webpack-plugin-inject-external@^0.2.0:
   version "0.2.0"
   resolved "http://rn.juxinli.com/webpack-plugin-inject-external/download/webpack-plugin-inject-external-0.2.0.tgz#989787d0c0c57e91a6549d006c1ab63566d30299"
@@ -10029,9 +10037,9 @@ webpack-plugin-inject-external@^0.2.0:
     posthtml "^0.9.2"
     posthtml-inject "^0.2.2"
 
-webpack-plugin-inject-service-worker@^0.2.3:
-  version "0.2.3"
-  resolved "http://rn.juxinli.com/webpack-plugin-inject-service-worker/download/webpack-plugin-inject-service-worker-0.2.3.tgz#0188d7679deda999bfabdad1155ac938f30e893f"
+webpack-plugin-inject-service-worker@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npmjs.org/webpack-plugin-inject-service-worker/-/webpack-plugin-inject-service-worker-0.3.0.tgz#1afdae01a40d372eed7f71c6fa8a451073b1ab48"
   dependencies:
     lodash "^4.17.4"
 
