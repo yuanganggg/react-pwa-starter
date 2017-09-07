@@ -2,11 +2,11 @@
 # yarn lockfile v1
 
 
-"@coco/cli@^0.3.18":
-  version "0.3.18"
-  resolved "http://rn.juxinli.com/@coco/cli/download/@coco/cli-0.3.18.tgz#ec5546a30577d97dedc4b44464b032d3f2cb2814"
+"@coco/cli@^0.3.19":
+  version "0.3.19"
+  resolved "http://rn.juxinli.com/@coco/cli/download/@coco/cli-0.3.19.tgz#b3324b94973064787bc77e38080761e32616432c"
   dependencies:
-    "@coco/webpack" "^0.3.12"
+    "@coco/webpack" "^0.3.13"
     babel-eslint "^7.2.3"
     chalk "^2.1.0"
     commander "^2.9.0"
@@ -25,9 +25,9 @@
     webpack "^3.5.2"
     webpack-dev-server "^2.7.1"
 
-"@coco/webpack@^0.3.12":
-  version "0.3.12"
-  resolved "http://rn.juxinli.com/@coco/webpack/download/@coco/webpack-0.3.12.tgz#9423eda6aa1ad97d40f29f1131ddd393f0cb82fe"
+"@coco/webpack@^0.3.13":
+  version "0.3.13"
+  resolved "http://rn.juxinli.com/@coco/webpack/download/@coco/webpack-0.3.13.tgz#fed3e8e5ad524c86643c6fba75bab682692f893c"
   dependencies:
     awesome-typescript-loader "^3.2.2"
     babel-core "^6.25.0"
@@ -7459,6 +7459,15 @@ posthtml-inject@^0.2.2:
     posthtml "^0.9.2"
     posthtml-match-helper "^1.0.1"
 
+posthtml-inject@^0.4.0:
+  version "0.4.0"
+  resolved "http://rn.juxinli.com/posthtml-inject/download/posthtml-inject-0.4.0.tgz#b3655be76ca3d4b04404d798dc69d5e49dc74ec3"
+  dependencies:
+    chalk "^2.1.0"
+    lodash "^4.17.4"
+    posthtml "^0.9.2"
+    posthtml-match-helper "^1.0.1"
+
 posthtml-match-helper@^1.0.1:
   version "1.0.1"
   resolved "http://rn.juxinli.com/posthtml-match-helper/download/posthtml-match-helper-1.0.1.tgz#451253de8e5844a348e963ad5edd7769eb129513"
@@ -10037,11 +10046,12 @@ webpack-plugin-inject-external@^0.2.0:
     posthtml "^0.9.2"
     posthtml-inject "^0.2.2"
 
-webpack-plugin-inject-service-worker@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.npmjs.org/webpack-plugin-inject-service-worker/-/webpack-plugin-inject-service-worker-0.3.0.tgz#1afdae01a40d372eed7f71c6fa8a451073b1ab48"
+webpack-plugin-inject-service-worker@^0.3.2:
+  version "0.3.2"
+  resolved "http://rn.juxinli.com/webpack-plugin-inject-service-worker/download/webpack-plugin-inject-service-worker-0.3.2.tgz#21ef8b704c3611c10ff38302529141cd6f28ee7f"
   dependencies:
     lodash "^4.17.4"
+    posthtml-inject "^0.4.0"
 
 webpack-plugin-strawberry@^0.1.2:
   version "0.1.2"
