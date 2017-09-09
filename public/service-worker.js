@@ -6,7 +6,7 @@
 /* eslint-env worker */
 
 // Import workbox scripts
-importScripts('workbox-sw.prod.v2.0.1.js');
+importScripts('/workbox-sw.prod.v2.0.1.js');
 
 // Construct Workbox
 const swWorkBox = new self.WorkboxSW({
