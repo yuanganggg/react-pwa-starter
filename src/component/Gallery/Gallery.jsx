@@ -13,11 +13,11 @@ import 'rxjs/add/operator/map';
 import './Gallery.scss';
 
 // Internal
-import cartoon1 from '../../assets/1.jpg';
-import cartoon2 from '../../assets/2.jpg';
-import cartoon3 from '../../assets/3.jpg';
-import cartoon4 from '../../assets/4.jpg';
-import cartoon5 from '../../assets/5.jpg';
+import cartoon1 from '../../asset/prefetch-cartoon-1.jpg';
+import cartoon2 from '../../asset/prefetch-cartoon-2.jpg';
+import cartoon3 from '../../asset/prefetch-cartoon-3.jpg';
+import cartoon4 from '../../asset/prefetch-cartoon-4.jpg';
+import cartoon5 from '../../asset/prefetch-cartoon-5.jpg';
 
 // Component Scope
 const cartoons = [cartoon1, cartoon2, cartoon3, cartoon4, cartoon5];
