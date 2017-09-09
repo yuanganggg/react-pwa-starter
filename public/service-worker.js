@@ -6,7 +6,7 @@
 /* eslint-env worker */
 
 // Import workbox scripts
-importScripts('workbox-sw.prod.v2.0.0.js');
+importScripts('workbox-sw.prod.v2.0.1.js');
 
 // Construct Workbox
 const swWorkBox = new self.WorkboxSW({
@@ -18,21 +18,7 @@ const swWorkBox = new self.WorkboxSW({
 // Pre-cache static files
 swWorkBox.precache([]);
 
-// Register pre-render strategy
-const PreRenderPaths = ['/search', '/review', '/gallery'];
-const PreRenderRoute = {
-  match: ({ url, event }) => event.request.mode === 'navigate' && PreRenderPaths.includes(url.pathname),
-  handler: ({ event }) => {
-    // Pre-render directory index
-    const target = `${event.request.url}'/index.html'`;
-
-    return fetch(target).catch(() => caches.match(target));
-  }
-};
-
-swWorkBox.router.registerRoute(PreRenderRoute.match, PreRenderRoute.handler);
-
-// Avoid static file fall into navigate mode
+// Avoid static file, prerender paths fall into navigate entry
 swWorkBox.router.registerNavigationRoute('/index.html', {
   blacklist: [
     /\/(search|review|gallery)/,
