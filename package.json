@@ -48,6 +48,7 @@
     "npm-run-all": "^4.0.2",
     "prerender-spa-plugin": "^2.1.0",
     "webpack-plugin-inject-service-worker": "^0.3.2",
+    "webpack-plugin-network-hints": "^0.3.0",
     "webpack-pwa-manifest": "^3.2.0",
     "workbox-build": "^2.0.0"
   },
