@@ -12,7 +12,10 @@
     "precommit": "lint-staged",
     "clean": "rm -rf bundle",
     "dev": "coco server --react --bootstrap ./src/main.jsx",
-    "build": "coco build --bootstrap ./src/main.jsx",
+    "build": "npm-run-all -s build:*",
+    "build:webpack": "coco build --bootstrap ./src/main.jsx",
+    "build:critical": "coco critical ./dist/client/**/*.html --static-root ./dist/client/",
+    "build:pwa": "workbox inject:manifest --config-file workbox.config.js ",
     "test": "jest -c jest.config.js --coverage",
     "test:jest": "jest -c jest.config.js --watch",
     "lint": "npm-run-all -p lint:*",
@@ -48,8 +51,10 @@
     "npm-run-all": "^4.0.2",
     "prerender-spa-plugin": "^2.1.0",
     "webpack-plugin-inject-service-worker": "^0.3.2",
+    "webpack-plugin-network-hints": "^0.3.0",
     "webpack-pwa-manifest": "^3.2.0",
-    "workbox-build": "^2.0.0"
+    "workbox-build": "^2.0.0",
+    "workbox-cli": "^2.0.1"
   },
   "browserslist": [
     "last 2 versions",
