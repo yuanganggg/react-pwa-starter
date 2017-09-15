@@ -15,7 +15,7 @@ env:
   jest: true
 extends:
   - 'eslint:recommended'
-  - 'airbnb-base'
+  - 'airbnb'
 rules:
   indent:
     - error

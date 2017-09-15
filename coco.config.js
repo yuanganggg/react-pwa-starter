@@ -10,10 +10,11 @@ const path = require('path');
 const InjectServiceWorkerPlugin = require('webpack-plugin-inject-service-worker');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const CopyPlugin = require('copy-webpack-plugin');
-const PrerenderSpaPlugin = require('prerender-spa-plugin');
 const NetworkHintsPlugin = require('webpack-plugin-network-hints');
 
 module.exports = {
+  root: './dist/client',
+  routes: ['/search', '/review', '/gallery'],
   plugins: [
     Reflect.construct(NetworkHintsPlugin, [{
       verbose: true,
@@ -46,10 +47,6 @@ module.exports = {
           }
         ]
       }
-    ]),
-    Reflect.construct(PrerenderSpaPlugin, [
-      path.resolve(process.cwd(), 'dist', 'client'),
-      ['/search', '/review', '/gallery']
     ]),
     Reflect.construct(CopyPlugin, [[{
       from: 'node_modules/workbox-sw/build/importScripts/workbox-sw.prod.*',
