@@ -12,7 +12,7 @@
     "precommit": "lint-staged",
     "clean": "rm -rf bundle",
     "dev": "coco server --react --bootstrap ./src/main.jsx",
-    "build": "coco build --bootstrap ./src/main.jsx",
+    "build:client": "coco build --bootstrap ./src/main.jsx",
     "test": "jest -c jest.config.js --coverage",
     "test:jest": "jest -c jest.config.js --watch",
     "lint": "npm-run-all -p lint:*",
