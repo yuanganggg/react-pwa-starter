@@ -13,6 +13,7 @@
     "clean": "rm -rf bundle",
     "dev": "coco server --react --bootstrap ./src/main.jsx",
     "build:client": "coco build --bootstrap ./src/main.jsx",
+    "build:sw": "workbox inject:manifest --config-file workbox.config.js",
     "test": "jest -c jest.config.js --coverage",
     "test:jest": "jest -c jest.config.js --watch",
     "lint": "npm-run-all -p lint:*",
@@ -50,14 +51,15 @@
     "webpack-plugin-inject-service-worker": "^0.3.2",
     "webpack-plugin-network-hints": "^0.3.0",
     "webpack-pwa-manifest": "^3.2.0",
-    "workbox-build": "^2.0.0"
+    "workbox-build": "^2.0.0",
+    "workbox-cli": "^2.0.1"
   },
   "browserslist": [
     "last 2 versions",
     "iOS 10"
   ],
   "dependencies": {
-    "@coco/cli": "^0.3.19",
+    "@coco/cli": "^0.3.25",
     "antd": "^2.12.6",
     "babel-runtime": "^6.23.0",
     "lodash": "^4.17.4",
