@@ -5,7 +5,8 @@
 
 module.exports = {
   transform: {
-    '\\.(js|jsx)$': 'babel-jest'
+    '\\.(js|jsx)$': 'babel-jest',
+    '\\.(jpg|jpeg|png|giff|webp|svg)$': '<rootDir>/__transformer__/asset-transformer.js'
   },
   moduleFileExtensions: ['js', 'jsx'],
   moduleDirectories: ['node_modules'],
@@ -17,7 +18,7 @@ module.exports = {
   coverageDirectory: 'coverage',
   coverageReporters: ['lcov', 'html'],
   // Test configuration
-  testMatch: ['**/__tests__/**/*.spec.js'],
+  testMatch: ['**/__tests__/**/*.spec.{js,jsx}'],
   testPathIgnorePatterns: [
     '/node_modules/',
     '/dist/'

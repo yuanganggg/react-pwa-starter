@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery component suits should render image slider 1`] = `"<TransitionGroup />"`;
+
+exports[`Gallery component suits should render image slider 2`] = `"<TransitionGroup />"`;

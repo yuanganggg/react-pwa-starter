@@ -8388,6 +8388,13 @@ react-slick@~0.15.0:
     object-assign "^4.1.0"
     slick-carousel "^1.6.0"
 
+react-test-renderer@^15.6.1:
+  version "15.6.1"
+  resolved "http://registry.npm.taobao.org/react-test-renderer/download/react-test-renderer-15.6.1.tgz#026f4a5bb5552661fd2cc4bbcd0d4bc8a35ebf7e"
+  dependencies:
+    fbjs "^0.8.9"
+    object-assign "^4.1.0"
+
 react-transition-group@^2.2.0:
   version "2.2.0"
   resolved "http://registry.npm.taobao.org/react-transition-group/download/react-transition-group-2.2.0.tgz#793bf8cb15bfe91b3101b24bce1c1d2891659575"
