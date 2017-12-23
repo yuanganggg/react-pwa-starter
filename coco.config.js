@@ -14,7 +14,7 @@ const NetworkHintsPlugin = require('webpack-plugin-network-hints');
 
 module.exports = {
   root: './dist/client',
-  routes: ['/search', '/review', '/gallery'],
+  routes: ['/review', '/gallery'],
   plugins: [
     Reflect.construct(NetworkHintsPlugin, [{
       verbose: true,
