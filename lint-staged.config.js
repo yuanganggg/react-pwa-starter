@@ -8,6 +8,10 @@ module.exports = {
     'eslint --fix',
     'git add'
   ],
+  'src/**/*.css': [
+    'stylelint --fix',
+    'git add'
+  ],
   '__tests__/**/*.js': [
     'eslint --fix',
     'git add'
