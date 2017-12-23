@@ -8,7 +8,6 @@ module.exports = {
   swSrc: './public/service-worker.js',
   swDest: './dist/client/service-worker.js',
   templatedUrls: {
-    '/search': ['./search/index.html'],
     '/review': ['./review/index.html'],
     '/gallery': ['./gallery/index.html']
   }
