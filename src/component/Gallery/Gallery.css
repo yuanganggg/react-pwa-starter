@@ -1,3 +1,4 @@
+/* standard slider selector */
 .slider-box {
   position: relative;
   width: 100%;
@@ -5,7 +6,7 @@
   overflow: hidden;
 }
 
-.slider-box__item {
+.slider-box-item {
   position: absolute;
   top: 0;
   left: 0;
@@ -14,30 +15,30 @@
   will-change: transform;
 }
 
-.slider-box__image {
+.slider-box-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/*---- slide animation ----*/
-.slide-enter {
+/* slide animation, need global selector */
+:global .slide-enter {
   opacity: 0;
   transform: translateX(100%);
 }
 
-.slide-enter.slide-enter-active {
+:global .slide-enter.slide-enter-active {
   opacity: 1;
   transform: translateX(0);
   transition: all 400ms ease-in-out;
 }
 
-.slide-exit {
+:global .slide-exit {
   opacity: 1;
   transform: translateX(0);
 }
 
-.slide-exit.slide-exit-active {
+:global .slide-exit.slide-exit-active {
   opacity: 0;
   transform: translateX(-100%);
   transition: all 500ms ease-in-out;

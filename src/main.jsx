@@ -1,5 +1,5 @@
 /**
- * @description - just preview react lib development
+ * @description - just preview react pwa development
  * @author - bornkiller <hjj491229492@hotmail.com>
  */
 
@@ -11,7 +11,6 @@ import AppContainer from 'react-hot-loader/lib/AppContainer';
 
 // Internal
 import App from './container/App';
-import './scss/core.scss';
 
 // Scope
 const container = document.querySelector('#main');

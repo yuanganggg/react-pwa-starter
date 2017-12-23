@@ -2,22 +2,21 @@
  * @description - Gallery slider
  * @author - huang.jian <hjj491229492@hotmail.com>
  */
-// External
+
+// external
 import React, { Component } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/timer';
 import 'rxjs/add/operator/map';
 
-// Style
-import './Gallery.scss';
-
-// Internal
-import cartoon1 from '../../asset/prefetch-cartoon-1.jpg';
-import cartoon2 from '../../asset/prefetch-cartoon-2.jpg';
-import cartoon3 from '../../asset/prefetch-cartoon-3.jpg';
-import cartoon4 from '../../asset/prefetch-cartoon-4.jpg';
-import cartoon5 from '../../asset/prefetch-cartoon-5.jpg';
+// internal
+import style from './Gallery.css';
+import cartoon1 from './asset/prefetch-cartoon-1.jpg';
+import cartoon2 from './asset/prefetch-cartoon-2.jpg';
+import cartoon3 from './asset/prefetch-cartoon-3.jpg';
+import cartoon4 from './asset/prefetch-cartoon-4.jpg';
+import cartoon5 from './asset/prefetch-cartoon-5.jpg';
 
 // Component Scope
 const cartoons = [cartoon1, cartoon2, cartoon3, cartoon4, cartoon5];
@@ -57,7 +56,7 @@ export default class Gallery extends Component {
   render() {
     return (
       <article>
-        <div className="slider-box">
+        <div className={style.sliderBox}>
           <TransitionGroup>
             {
               this.state.activeImage.map((url) => (
@@ -66,8 +65,8 @@ export default class Gallery extends Component {
                   timeout={this.timeout}
                   classNames="slide"
                 >
-                  <div className="slider-box__item">
-                    <img className="slider-box__image" src={url} alt="cartoon" />
+                  <div className={style.slideBoxItem}>
+                    <img className={style.slideBoxImage} src={url} alt="cartoon" />
                   </div>
                 </CSSTransition>
               ))
